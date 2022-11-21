@@ -10,6 +10,8 @@
 @Desc    :   None
 '''
 
+‘’‘此处使用中文微博情感分析数据集，基于LSTM模型实现情感分析’‘’
+
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
@@ -182,7 +184,7 @@ batch_size = 1024
 num_epoch = 10
 num_class = 2
 
-train_data, test_data, vocab = build_data("/home/zouyuheng/data/Chinese/weibo_senti_100k.csv")
+train_data, test_data, vocab = build_data("weibo_senti_100k.csv")
 # 加载数据
 train_dataset = MyDataset(train_data)
 test_dataset = MyDataset(test_data)
